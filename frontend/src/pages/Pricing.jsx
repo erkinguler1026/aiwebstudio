@@ -9,7 +9,7 @@ const Pricing = () => {
     {
       name: "Starter",
       description: "Hızlı başlangıç yapmak isteyen küçük işletmeler için hazırlık ve kurulum.",
-      price: isTurkish ? "4.999 ₺" : "$299",
+      price: isTurkish ? "6.999 ₺" : "$299",
       features: [
         "AI Destekli Web Sitesi Kurulumu",
         "Responsive Tasarım",
@@ -23,7 +23,7 @@ const Pricing = () => {
     {
       name: "Business",
       description: "Büyüyen firmalar için tam kapsamlı üretim ve servis paketi.",
-      price: isTurkish ? "12.999 ₺" : "$899",
+      price: isTurkish ? "15.999 ₺" : "$899",
       features: [
         "5 Sayfaya Kadar AI Web Tasarımı",
         "Müşteri Destek AI Bot Entegrasyonu",
