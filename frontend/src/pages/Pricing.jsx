@@ -30,7 +30,7 @@ const Pricing = () => {
         "Gelişmiş Teknik Destek (7/24)",
         "Aylık Bakım & Güncelleme",
         "Performans Raporlama",
-        "Sınırsız Teknik Revizyon"
+        "Sözleşmeli, Haftalık Teknik Revizyon"
       ],
       cta: "Servis Al",
       popular: true
