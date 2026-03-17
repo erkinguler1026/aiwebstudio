@@ -1,9 +1,8 @@
 import { Link, useLocation, Outlet } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Bot, ChevronRight } from 'lucide-react';
 
 const Layout = () => {
-  const location = useLocation();
 
   return (
     <div className="min-h-screen relative selection:bg-primary/30">
@@ -40,18 +39,8 @@ const Layout = () => {
       </nav>
 
       {/* Main Content Area */}
-      <main className="pt-20 min-h-[80vh]">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={location.pathname}
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.02 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <Outlet />
-          </motion.div>
-        </AnimatePresence>
+      <main className="pt-20 min-h-[80vh] relative z-10">
+        <Outlet />
       </main>
 
       {/* Premium Footer */}
