@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Target, Lightbulb, TrendingUp } from 'lucide-react';
+import { Target, Lightbulb, TrendingUp, ShieldCheck, LifeBuoy, Zap } from 'lucide-react';
 
 const About = () => {
   return (
@@ -10,7 +10,7 @@ const About = () => {
           animate={{ opacity: 1 }}
           className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-8"
         >
-          Biz Kimiz?
+          Vizyonumuz & Hizmet Standartlarımız
         </motion.div>
         
         <motion.h1 
@@ -18,7 +18,7 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-5xl md:text-8xl font-bold tracking-tight mb-12 text-gradient"
         >
-          GELECEĞI BUGÜN <br /> İNŞA EDİYORUZ.
+          DİJİTAL SERVİSİN <br /> YENİ STANDARTI.
         </motion.h1>
 
         <motion.p 
@@ -27,37 +27,38 @@ const About = () => {
           transition={{ delay: 0.1 }}
           className="text-white/40 text-xl md:text-2xl leading-relaxed mb-20"
         >
-          Alfa Yapay Zeka Stüdyosu olarak, standartların ötesine geçiyoruz. 
-          Sıradan bir ajans değil, mühendislik disipliniyle AI potansiyelini birleştiren bir danışmanlık ve teknoloji üretim merkeziyiz.
+          Alfa Yapay Zeka Stüdyosu olarak, sadece kod yazmıyoruz. 
+          <span className="text-white"> Yapay zeka destekli web siteleri tasarlıyor, satışını gerçekleştiriyor ve teknik bakım hizmetlerini üstleniyoruz.</span> 
+          İşletmenizi dijitalde yorulmayan, akıllı ve sürekli güncel kalan bir sisteme dönüştürüyoruz.
         </motion.p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pt-20 border-t border-white/5">
         <div className="space-y-6">
           <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
-            <Target className="text-primary w-6 h-6" />
+            <Zap className="text-primary w-6 h-6" />
           </div>
-          <h3 className="text-xl font-bold">Misyonumuz</h3>
+          <h3 className="text-xl font-bold">Hızlı Üretim</h3>
           <p className="text-white/40 text-sm leading-relaxed">
-            Karmaşık mühendislik problemlerini akıllı AI çözümleri ve premium tasarımlarla basitleştirmek.
+            Mühendislik disipliniyle AI hızını birleştirerek, profesyonel web sitelerinizi rekor sürede hazır hale getirip teslim ediyoruz.
           </p>
         </div>
         <div className="space-y-6">
           <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center border border-secondary/20">
-            <Lightbulb className="text-secondary w-6 h-6" />
+            <LifeBuoy className="text-secondary w-6 h-6" />
           </div>
-          <h3 className="text-xl font-bold">Vizyonumuz</h3>
+          <h3 className="text-xl font-bold">Kesintisiz Destek</h3>
           <p className="text-white/40 text-sm leading-relaxed">
-            Dijital dönüşümün sadece bir adım değil, markanız için bir sıçrama olmasını sağlamak.
+            Satış sonrası 7/24 yanınızdayız. Teknik sorunlar, güncellemeler ve AI model geliştirmeleri için tam servis desteği başlıyoruz.
           </p>
         </div>
         <div className="space-y-6">
           <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center border border-accent/20">
-            <TrendingUp className="text-accent w-6 h-6" />
+            <ShieldCheck className="text-accent w-6 h-6" />
           </div>
-          <h3 className="text-xl font-bold">Hedefimiz</h3>
+          <h3 className="text-xl font-bold">Güvenli Bakım</h3>
           <p className="text-white/40 text-sm leading-relaxed">
-            Türkiye ve dünya pazarında, en yüksek kalitede AI tabanlı dijital ekosistemler kurmak.
+            Periyodik güvenlik taramaları ve performans bakımları ile web sisteminizin her zaman ilk günkü hızında kalmasını sağlıyoruz.
           </p>
         </div>
       </div>
