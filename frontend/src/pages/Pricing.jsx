@@ -96,7 +96,7 @@ const Pricing = () => {
               <p className="text-white/40 text-sm mb-6 leading-relaxed min-h-[48px]">{plan.description}</p>
               
               <div className="mb-8">
-                <span className="text-4xl font-bold">{plan.price}</span>
+                <span className="text-4xl font-bold">{plan.price}{isTurkish && plan.price !== "Özel Teklif" ? " +KDV" : ""}</span>
                 {plan.price !== "Özel Teklif" && <span className="text-white/40 text-sm ml-2">/ proje başı</span>}
               </div>
 
