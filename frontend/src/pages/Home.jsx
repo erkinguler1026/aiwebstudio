@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Zap, ChevronRight, Globe, Shield, CheckCircle2, 
-  Rocket, Wrench, Settings, BarChart3, Headphones,
+  Zap, ChevronRight, Globe, CheckCircle2, 
+  Rocket, Wrench, BarChart3, Headphones,
   Activity, Cpu, Lock, ShieldCheck, ShieldAlert
 } from 'lucide-react';
 import axios from 'axios';
@@ -200,7 +200,7 @@ const Home = () => {
         <div className="text-center mb-24">
           <span className="px-5 py-1.5 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold tracking-[0.3em] uppercase text-white/40 mb-10 inline-block">
             <ShieldAlert size={12} className="inline-block mr-2 text-primary" /> DİJİTAL ZIRH & GÜVENLİK
-          </div>
+          </span>
           <h2 className="text-6xl md:text-9xl font-black mb-10 italic">İşiniz Zırhlı Kodlarla Güvende.</h2>
           <p className="text-white/40 text-2xl max-w-3xl mx-auto font-light leading-relaxed">
             Sitenizi sadece tasarlamıyoruz; siber saldırılara, hacking girişimlerine ve veri sızıntılarına karşı askeri düzeyde koruyoruz.
