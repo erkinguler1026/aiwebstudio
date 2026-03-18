@@ -52,9 +52,9 @@ const Home = () => {
     <div className="relative min-h-screen bg-[#0a0a0c] text-white selection:bg-primary/30 overflow-x-hidden pt-10">
       {/* Nuclear Deployment Marker */}
       <div 
-        style={{ position: 'fixed', top: 0, left: 0, width: '100%', backgroundColor: '#dc2626', color: 'white', fontSize: '12px', fontWeight: 'bold', padding: '10px 0', textAlign: 'center', zIndex: 9999, textTransform: 'uppercase', letterSpacing: '0.5em' }}
+        style={{ position: 'fixed', top: 0, left: 0, width: '100%', backgroundColor: '#dc2626', color: 'white', fontSize: '12px', fontWeight: 'bold', padding: '10px 0', textAlign: 'center', zIndex: 9999, textTransform: 'uppercase', letterSpacing: '0.4em' }}
       >
-        DEPLOYMENT SYNC Status: V.1.5.0 - ACTIVE ✅
+        LIVE DEPLOYMENT SYNC Status: V.1.6.0 - TIMESTAMP: {new Date().toLocaleTimeString('tr-TR')} - ACTIVE ✅
       </div>
 
       <div className="bg-mesh" />
@@ -67,7 +67,7 @@ const Home = () => {
             animate={{ opacity: 1, scale: 1 }}
             className="px-6 py-2 rounded-full border border-white/10 bg-white/5 text-[12px] font-bold tracking-[0.3em] uppercase text-primary mb-10 inline-block"
           >
-            <Zap size={12} className="inline-block mr-2 animate-pulse" /> ALFA AI SİSTEM STRATEJİMİZ (V.1.5.0)
+            <Zap size={12} className="inline-block mr-2 animate-pulse" /> ALFA AI SİSTEM STRATEJİMİZ (V.1.6.0)
           </motion.div>
 
           <motion.h1 
@@ -151,7 +151,7 @@ const Home = () => {
 
           <div className="flex justify-center lg:justify-end">
              <div 
-               style={{ width: '550px', height: '550px' }}
+               style={{ width: '550px', height: '550px', minWidth: '550px', minHeight: '550px' }}
                className="flex flex-col items-center justify-center p-16 glass-morphism rounded-[60px] border border-white/10 text-center relative group hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] transition-all duration-500 flex-shrink-0 overflow-hidden"
              >
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent opacity-20 blur-xl group-hover:opacity-40 transition-opacity" />
@@ -196,7 +196,7 @@ const Home = () => {
 
           <div className="flex justify-center lg:justify-end">
              <div 
-               style={{ width: '550px', height: '550px' }}
+               style={{ width: '550px', height: '550px', minWidth: '550px', minHeight: '550px' }}
                className="flex flex-col items-center justify-center p-16 glass-morphism rounded-[60px] border border-white/10 text-center relative group hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] transition-all duration-500 flex-shrink-0 overflow-hidden"
              >
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent opacity-20 blur-xl group-hover:opacity-40 transition-opacity" />
