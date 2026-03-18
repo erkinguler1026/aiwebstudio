@@ -277,8 +277,8 @@ const Home = () => {
         {/* Decorative background element */}
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -z-10" />
         
-        <div className="grid lg:grid-cols-[1.1fr_auto] gap-32 items-center">
-          <div className="max-w-3xl">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="lg:w-1/2">
             <motion.h2 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -310,7 +310,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex justify-end">
+          <div className="lg:w-1/2 flex justify-center lg:justify-end">
              <div className="w-[500px] h-[500px] flex flex-col items-center justify-center p-16 glass-morphism rounded-[60px] border border-white/10 text-center relative group hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] transition-all duration-500 flex-shrink-0">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent opacity-20 blur-xl group-hover:opacity-40 transition-opacity" />
                 <ShieldCheck className="w-24 h-24 text-primary mx-auto mb-8 hover:scale-110 hover:text-purple-400 transition-all duration-500 cursor-pointer" />
