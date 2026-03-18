@@ -84,7 +84,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="flex items-center gap-2 mb-10 text-white/30 text-[10px] uppercase tracking-widest font-bold"
+          className="flex items-center gap-2 mb-10 text-white text-[16px] uppercase tracking-widest font-bold"
         >
           <Shield size={14} className="text-primary" /> 100% Teknik Servis Garantisi
         </motion.div>
@@ -384,7 +384,7 @@ const Home = () => {
           <p className="text-white/60 text-xl mb-12 max-w-2xl mx-auto">Sürpriz maliyetler yok. Teknik karmaşa yok. Sadece işinize odaklanan net servis paketleri.</p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
             <div className="text-center">
-              <span className="block text-white/30 text-[10px] uppercase tracking-widest font-bold mb-2 font-mono">Kurulum Başlangıcı</span>
+              <span className="block text-white text-[16px] uppercase tracking-widest font-bold mb-2 font-mono">Kurulum Başlangıcı</span>
               <p className="text-5xl font-black text-white tracking-tighter flex items-baseline justify-center gap-1">
                 6.999 ₺ 
                 <span className="text-[18px] text-white/80 font-black ml-1">+KDV</span> 
@@ -393,7 +393,7 @@ const Home = () => {
             </div>
             <div className="w-px h-16 bg-white/10 hidden md:block" />
             <div className="text-center">
-              <span className="block text-white/30 text-[10px] uppercase tracking-widest font-bold mb-2 font-mono">Yönetim Paketi</span>
+              <span className="block text-white text-[16px] uppercase tracking-widest font-bold mb-2 font-mono">Yönetim Paketi</span>
               <p className="text-5xl font-black text-primary tracking-tighter flex items-baseline justify-center gap-1">
                 499 ₺ 
                 <span className="text-[18px] text-primary/80 font-black ml-1">+KDV</span> 
@@ -402,7 +402,7 @@ const Home = () => {
             </div>
             <div className="w-px h-16 bg-white/10 hidden md:block" />
             <div className="text-center">
-              <span className="block text-white/30 text-[10px] uppercase tracking-widest font-bold mb-2 font-mono">Hizmet Taahhüdü</span>
+              <span className="block text-white text-[16px] uppercase tracking-widest font-bold mb-2 font-mono">Hizmet Taahhüdü</span>
               <p className="text-3xl font-bold text-white uppercase tracking-tighter">12 Ay <br /> <span className="text-white/20 text-sm font-normal">Teknik Sigorta</span></p>
             </div>
           </div>
