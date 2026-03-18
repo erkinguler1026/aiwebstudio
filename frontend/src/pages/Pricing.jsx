@@ -2,51 +2,132 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Check, Info, LifeBuoy, ShieldCheck } from 'lucide-react';
 
+const FeatureItem = ({ text, description }) => {
+  const [showTooltip, setShowTooltip] = useState(false);
+
+  return (
+    <div className="relative flex items-center gap-3 text-[11px] text-white/70 group py-1">
+      <div className="w-4 h-4 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+        <Check size={10} className="text-primary" />
+      </div>
+      <span className="cursor-default text-left">{text}</span>
+      <div 
+        onMouseEnter={() => setShowTooltip(true)}
+        onMouseLeave={() => setShowTooltip(false)}
+        className="cursor-help text-white/30 hover:text-white/60 transition-colors"
+      >
+        <Info size={12} />
+      </div>
+
+      {showTooltip && (
+        <div className="absolute z-50 bottom-full left-0 mb-2 w-48 p-3 bg-[#111111] border border-white/10 rounded-xl shadow-2xl animate-in fade-in slide-in-from-bottom-1">
+          <p className="text-[10px] text-white/80 leading-relaxed font-medium">
+            {description}
+          </p>
+          <div className="absolute top-full left-4 border-8 border-transparent border-t-[#111111]"></div>
+        </div>
+      )}
+    </div>
+  );
+};
+
 const Pricing = () => {
   const [isTurkish, setIsTurkish] = useState(true);
 
   const plans = [
     {
-      name: "Starter",
+      name: "BAŞLANGIÇ PAKETİ",
       description: "Hızlı başlangıç yapmak isteyen küçük işletmeler için hazırlık ve kurulum.",
-      price: isTurkish ? "6.999 ₺" : "$299",
+      price: isTurkish ? "6.999 ₺ +KDV" : "$299",
+      monthlyService: isTurkish ? "499 ₺ +KDV" : "$25",
+      productionTime: "4-7 İş Günü",
+      launchTime: "24-48 Saat",
       features: [
-        "AI Destekli Web Sitesi Kurulumu",
-        "Responsive Tasarım",
-        "Temel SEO Altyapısı",
-        "1 Ay Ücretsiz Teknik Destek",
-        "Haftalık Yedekleme"
+        { text: "SSR (Server Side Rendering)", description: "Sayfanın sunucuda hazırlanması; Google'da en üstte çıkmanızı ve sitenin anında açılmasını sağlar." },
+        { text: "Meta-Tag & SEO Optimizasyonu", description: "Arama motorlarının sitenizi tam doğrulukla dizine eklemesini sağlar." },
+        { text: "SSL & Güvenlik Duvarı", description: "Ziyaretçi verilerini şifreler ve sitenizi güvenli (https) hale getirir." },
+        { text: "12 Ay Teknik Garanti", description: "Kod kaynaklı tüm aksaklıklarda ücretsiz destek ve düzeltme taahhüdü." },
+        { text: "7/24 Uptime Monitoring", description: "Sitenizin kesintisiz erişilebilir olduğunu denetleyen otomatik takip sistemi." },
+        { text: "1 Yıl Alfa Dakik Servis Garantisi", description: "Hatalara karşı 1 yıl boyunca ücretsiz onarım ve tıkır tıkır işleyen destek." },
+        { text: "Haftalık Dijital Diagnostik", description: "Sistem loglarının ve güvenliğin otomotik olarak haftalık check-up'tan geçirilmesi." },
+        { text: "Yedek Parça (Modüler Yapı)", description: "Şasiniz hazır; ileride yeni özellik eklemek isterseniz sadece parçayı takıyoruz." },
+        { text: "Büyüme Temelleri", description: "Sitenizin büyümesi için gerekli temel analiz ve dijital ayak izi hazırlığı." }
       ],
-      cta: "Hemen Başlat",
+      cta: "Planı Başlat",
       popular: false
     },
     {
-      name: "Business",
+      name: "STANDART PAKET",
       description: "Büyüyen firmalar için tam kapsamlı üretim ve servis paketi.",
-      price: isTurkish ? "15.999 ₺" : "$899",
+      price: isTurkish ? "15.999 ₺ +KDV" : "$899",
+      monthlyService: isTurkish ? "999 ₺ +KDV" : "$45",
+      productionTime: "10-15 İş Günü",
+      launchTime: "3-5 İş Günü",
       features: [
-        "5 Sayfaya Kadar AI Web Tasarımı",
-        "Müşteri Destek AI Bot Entegrasyonu",
-        "Gelişmiş Teknik Destek (7/24)",
-        "Aylık Bakım & Güncelleme",
-        "Performans Raporlama",
-        "Sözleşmeli, Haftalık Teknik Revizyon"
+        { text: "GPT-4 Tabanlı Akıllı Chatbot", description: "Müşterilerinizin sorularını anında yanıtlayan, satış odaklı yapay zeka asistanı." },
+        { text: "Lighthouse 90+ Performans", description: "Dünya standartlarında hız ve erişilebilirlik puanı garantisi." },
+        { text: "Detaylı Aylık Analytics Raporu", description: "Ziyaretçilerinizin davranışlarını ve performans verilerini içeren rapor." },
+        { text: "5 Adet Teknik Revizyon Hakkı", description: "Her ay içerik veya görsel yapıda yapabileceğiniz 5 farklı teknik güncelleme." },
+        { text: "Haftalık Sağlık Kontrolü", description: "Sitenizin tüm fonksiyonlarının stabil çalışıp çalışmadığının rutin kontrolü." },
+        { text: "İçerik Yönetim Paneli (CMS)", description: "Sitenizdeki metin ve görselleri kolayca güncellemenizi sağlayan panel." },
+        { text: "Hızlandırılmış CDN Servisi", description: "Sitenizin dünyanın her yerinde ışık hızında açılmasını sağlayan sunucu ağı." },
+        { text: "Alfa Dakik Öncelikli Destek", description: "Küçük revizyon taleplerinizde 1 saat içinde müdahale garantisi." },
+        { text: "Mini Onarım (Auto King Stili)", description: "Ufak tasarım ve bug hasarları için sınırsız teknik rötüş desteği." },
+        { text: "Anti-Spam & reCAPTCHA", description: "Sitenizi kötü niyetli botlara ve gereksiz e-postalara karşı koruma." },
+        { text: "Premium Reklam Stratejisi", description: "Google ve Sosyal Medya reklamları için teknik altyapı ve strateji desteği." },
+        { text: "Aylık Büyüme Check-up", description: "Sitenizin satış performansını artıran aylık stratejik inceleme seansı." }
       ],
-      cta: "Servis Al",
+      cta: "Büyümeyi Başlat",
       popular: true
     },
     {
-      name: "Enterprise",
+      name: "KURUMSAL PAKET",
       description: "Büyük ölçekli projeler ve özel yazılım servis planları.",
       price: "Özel Teklif",
+      monthlyService: isTurkish ? "2.499 ₺ +KDV" : "$120",
+      productionTime: "20-35 İş Günü",
+      launchTime: "7-10 İş Günü",
       features: [
-        "Kurumsal AI Ekosistemleri",
-        "Özel Model Eğitimi & Entegrasyon",
-        "SLA Garantili Teknik Servis",
-        "Ömür Boyu Bakım Planı",
-        "Yedekli Bulut Sunucu Yönetimi"
+        { text: "Özel Eğitilmiş RAG AI Modeli", description: "Yapay zekanın sizin şirketinize özel dökümanlarla (PDf, Word vb.) konuşması." },
+        { text: "Dedicated Bulut Kaynakları", description: "Sadece sizin sitenize özel ayrılmış yüksek performanslı sunucu gücü." },
+        { text: "%99.9 Uptime & SLA", description: "Sitenizin her zaman açık kalacağı ve sorunlara anında müdahale sözleşmesi." },
+        { text: "AI Çok Dilli Lokalizasyon", description: "Yapay zeka ile tüm dillerde kusursuz içerik yönetimi ve çeviri." },
+        { text: "Enterprise WAF Kalkanı", description: "En üst düzey siber saldırı koruması ve bot engelleme sistemi." },
+        { text: "1 Saat İçinde Teknik Müdahale", description: "Olası teknik aksaklıklarda 1 saat içinde çözüm garantisi." },
+        { text: "Yıllık Güvenlik Taraması", description: "Siber saldırılara karşı direncin ölçüledüğü profesyonel sızma testleri." },
+        { text: "Ömür Boyu Servis Önceliği", description: "Kurumsal müşterilerimize özel, tüm güncellemelerde en üst sıra önceliği." },
+        { text: "Yedek Parça (Sınırsız Modül)", description: "Sitenizin büyümesi için gereken tüm teknik modüllerin anında entegrasyonu." },
+        { text: "Kurumsal E-posta Yönetimi", description: "Resmi şirket e-postalarınızın sorunsuz teslimat ve güvenlik ayarları." },
+        { text: "Tam Kapsamlı AI Pazarlama", description: "Yapay zeka asistanınızın aktif olarak satış ve pazarlama süreçlerine dahil edilmesi." },
+        { text: "Özel Veri Madenciliği", description: "Sektör verilerinizin AI ile analiz edilip stratejik kararlara dönüştürülmesi." },
+        { text: "Siber Sigorta Danışmanlığı", description: "Anlaşmalı acentelerimiz üzerinden siber risklerin poliçe kapsamına alınması süreci." },
+        { text: "İş Durması Teminatı", description: "Teknik kaynaklı kesintilerde operasyonel kaybı güvence altına alan özel şartlar." }
       ],
-      cta: "Teklif Al",
+      cta: "Stratejik Teklif Al",
+      popular: false
+    },
+    {
+      name: "ÖZEL-GİRİŞİM PAKETİ",
+      description: "Yeni girişimler (Start-up) için ölçeklenebilir ve esnek çözümler.",
+      price: "Özel Teklif",
+      monthlyService: "Değişken",
+      productionTime: "15-20 Gün (MVP)",
+      launchTime: "Kademeli",
+      features: [
+        { text: "MVP Hızlı Çıkış Stratejisi", description: "İş fikrinizin en hızlı ve en verimli şekilde hayata geçirilmesi süreci." },
+        { text: "Yatırımcı Dökümantasyonu", description: "Teknolojik altyapınızı yatırımcılara anlatacak detaylı teknik rapor." },
+        { text: "Mikroservis Mimarisi Planlama", description: "Dehasal kullanıcı sayılarına sorunsuz ulaşmayı sağlayan esnek yazılım yapısı." },
+        { text: "Tam API Entegrasyonları", description: "CRM, ERP veya kullandığınız harici yazılımlarla tam eşzamanlı çalışma." },
+        { text: "1-e-1 CTO Danışmanlığı", description: "Teknoloji stratejilerinizi belirleyen uzman mühendislik mentorluğu." },
+        { text: "Ölçeklenebilir DB Kümesi", description: "İş yükünüz arttıkça otomatik genişleyen veritabanı altyapısı." },
+        { text: "Biyometrik / 2FA Güvenlik", description: "Pannelleriniz için üst düzey iki aşamalı giriş güvenliği." },
+        { text: "Pazar ve Rakip Analizi", description: "Sektördeki rakiplerinizin teknolojik artı ve eksilerinin raporlanması." },
+        { text: "Aylık Teknik Servis Check-up", description: "Girişiminiz büyürken sistemin yorulmaması için her ay yapılan derinlemesine analiz." },
+        { text: "Yedek Parça (Gelecek Vizyonu)", description: "Projenizin gelecekteki ihtiyaçları için bugünden hazırlanan esnek kod yapısı." },
+        { text: "Özel Kod Denetimi", description: "Kod kalitesini ve hızını korumak için periyodik teknik revizyon." },
+        { text: "Siber Risk Sigorta Analizi", description: "Girişiminizin dijital varlıkları için siber sigorta gereksinimlerinin belirlenmesi." }
+      ],
+      cta: "Bize Ulaşın",
       popular: false
     }
   ];
@@ -58,17 +139,17 @@ const Pricing = () => {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
+            className="text-5xl md:text-7xl font-bold mb-6 text-gradient uppercase tracking-tighter"
           >
-            Servis & Bakım Paketleri
+            Üretim & Dakik Servis
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-white/60 text-lg max-w-2xl mx-auto mb-10"
+            className="text-white/60 text-lg max-w-2xl mx-auto mb-10 font-light"
           >
-            Yapay zeka sitelerinizi sadece hazırlamıyoruz; satış sonrası teknik destek ve periyodik bakımlarımızla hep yanınızdayız.
+            "Işık Hızında" teknik destek ve "Alfa Yapay Zeka" güveninde mini onarım paketleriyle dijital motorunuzu hep diri tutuyoruz.
           </motion.p>
 
           <div className="flex items-center justify-center gap-4">
@@ -83,37 +164,49 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {plans.map((plan, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className={`pricing-card premium-card p-10 rounded-3xl flex flex-col ${plan.popular ? 'popular border-primary/50' : ''}`}
+              className={`pricing-card premium-card p-8 rounded-[40px] flex flex-col ${plan.popular ? 'popular border-primary/50' : ''}`}
             >
-              <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-              <p className="text-white/40 text-sm mb-6 leading-relaxed min-h-[48px]">{plan.description}</p>
+              <h3 className="text-lg font-bold mb-2 tracking-tight">{plan.name}</h3>
+              <p className="text-white/40 text-[10px] mb-6 leading-relaxed min-h-[40px] uppercase tracking-wider">{plan.description}</p>
               
               <div className="mb-8">
-                <span className="text-4xl font-bold">{plan.price}{isTurkish && plan.price !== "Özel Teklif" ? " +KDV" : ""}</span>
-                {plan.price !== "Özel Teklif" && <span className="text-white/40 text-sm ml-2">/ proje başı</span>}
+                <div className="flex flex-col gap-1">
+                  <span className="text-white/40 text-[10px] uppercase tracking-widest font-bold">Sistem Kurulumu</span>
+                  <span className="text-4xl font-black tracking-tighter text-white">{plan.price}</span>
+                </div>
+                <div className="mt-4 p-3 bg-primary/5 border border-primary/20 rounded-2xl">
+                  <span className="block text-white/40 text-[9px] uppercase tracking-widest font-semibold mb-1">Aylık Sistem Yönetimi (Zorunlu)</span>
+                  <span className="text-xl font-bold text-primary">{plan.monthlyService} <span className="text-[10px] text-white/30 font-normal">/ ay</span></span>
+                </div>
               </div>
 
-              <div className="flex-grow space-y-4 mb-10">
+              <div className="grid grid-cols-2 gap-2 mb-8 border-y border-white/5 py-4">
+                <div className="flex flex-col">
+                  <span className="text-[9px] text-white/30 uppercase font-black tracking-tighter">İşleme Süresi</span>
+                  <span className="text-[11px] font-bold text-white/80">{plan.productionTime}</span>
+                </div>
+                <div className="flex flex-col border-l border-white/5 pl-3">
+                  <span className="text-[9px] text-white/30 uppercase font-black tracking-tighter">Yayına Alma</span>
+                  <span className="text-[11px] font-bold text-white/80">{plan.launchTime}</span>
+                </div>
+              </div>
+
+              <div className="flex-grow space-y-1 mb-10">
                 {plan.features.map((feature, i) => (
-                  <div key={i} className="flex items-center gap-3 text-sm text-white/70">
-                    <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Check size={12} className="text-primary" />
-                    </div>
-                    {feature}
-                  </div>
+                  <FeatureItem key={i} text={feature.text} description={feature.description} />
                 ))}
               </div>
 
-              <button className={`w-full py-4 rounded-xl font-bold transition-all ${
+              <button className={`w-full py-4 rounded-2xl font-bold text-sm transition-all active:scale-95 ${
                 plan.popular 
-                ? 'bg-primary text-white hover:bg-primary-dark shadow-lx shadow-primary/20' 
+                ? 'bg-primary text-white hover:bg-primary-dark shadow-xl shadow-primary/20' 
                 : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'
               }`}>
                 {plan.cta}
@@ -123,23 +216,23 @@ const Pricing = () => {
         </div>
 
         {/* Global Support info */}
-        <div className="mt-20 flex flex-col md:flex-row items-center justify-center gap-12 border-t border-white/5 pt-12">
+        <div className="mt-24 flex flex-col md:flex-row items-center justify-center gap-12 border-t border-white/5 pt-12">
             <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
-                    <LifeBuoy size={24} />
+                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                    <LifeBuoy size={20} />
                 </div>
                 <div className="text-left">
-                    <h4 className="font-bold">Anlık Teknik Servis</h4>
-                    <p className="text-white/40 text-xs">Olası sorunlarda 1 saat içinde müdahale.</p>
+                    <h4 className="font-bold text-sm">Anlık Teknik Servis</h4>
+                    <p className="text-white/40 text-[10px]">Olası sorunlarda 1 saat içinde müdahale.</p>
                 </div>
             </div>
             <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-                    <ShieldCheck size={24} />
+                <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+                    <ShieldCheck size={20} />
                 </div>
                 <div className="text-left">
-                    <h4 className="font-bold">Güvenli Altyapı</h4>
-                    <p className="text-white/40 text-xs">ISO Kalite standartlarında veri güvenliği ve bakım.</p>
+                    <h4 className="font-bold text-sm">Güvenli Altyapı</h4>
+                    <p className="text-white/40 text-[10px]">ISO27001:2022 ISMS kapsamında veri güvenliği ve bakım.</p>
                 </div>
             </div>
         </div>

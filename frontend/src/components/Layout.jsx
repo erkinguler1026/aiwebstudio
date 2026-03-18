@@ -65,7 +65,7 @@ const Layout = () => {
               <div className="flex flex-col gap-4">
                 <span className="font-bold text-white/80">Şirket</span>
                 <a href="#" className="text-white/40 hover:text-white transition-colors">Hakkımızda</a>
-                <a href="#" className="text-white/40 hover:text-white transition-colors">İletişim</a>
+                <Link to="/contact" className="text-white/40 hover:text-white transition-colors">İletişim</Link>
               </div>
               <div className="flex flex-col gap-4">
                 <span className="font-bold text-white/80">Sosyal</span>
