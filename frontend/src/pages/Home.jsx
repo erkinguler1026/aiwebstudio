@@ -58,7 +58,7 @@ const Home = () => {
           animate={{ opacity: 1, scale: 1 }}
           className="px-6 py-2 rounded-full border border-white/10 bg-white/5 text-[12px] font-bold tracking-[0.3em] uppercase text-primary mb-10"
         >
-          <Zap size={12} className="inline-block mr-2 animate-pulse" /> ALFA AI SİSTEM STRATEJİMİZ
+          <Zap size={12} className="inline-block mr-2 animate-pulse" /> ALFA AI SİSTEM STRATEJİMİZ (V.1.2.0)
         </motion.div>
 
         <motion.h1 
@@ -309,9 +309,9 @@ const Home = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="lg:w-1/2 flex justify-center lg:justify-end">
-             <div className="aspect-square w-full max-w-[500px] flex flex-col items-center justify-center p-16 glass-morphism rounded-[60px] border border-white/10 text-center relative group hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] transition-all duration-500">
+             <div className="w-[500px] h-[500px] flex flex-col items-center justify-center p-16 glass-morphism rounded-[60px] border border-white/10 text-center relative group hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] transition-all duration-500 flex-shrink-0">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent opacity-20 blur-xl group-hover:opacity-40 transition-opacity" />
                 <ShieldCheck className="w-24 h-24 text-primary mx-auto mb-8 hover:scale-110 hover:text-purple-400 transition-all duration-500 cursor-pointer" />
                 <h3 className="text-3xl font-bold mb-4">ISO31000:2018 Risk Yönetim Sistemi Kapsamında  <br /> & Güvence</h3>
@@ -330,14 +330,14 @@ const Home = () => {
         <div className="flex flex-col lg:flex-row gap-20 items-center">
           <div className="lg:w-1/2">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8">
-              Arabanızın Servisi <br /> 
+              Arabanızın Servisi <br />
               Varsa, <span className="text-primary">Sitenizin de Olmalı.</span>
             </h2>
             <p className="text-white/40 text-xl leading-relaxed mb-12">
-              Bir web sitesi kurup kaçmıyoruz. Biz, işletmenizin dijital motoru olan sitenize 
+              Bir web sitesi kurup kaçmıyoruz. Biz, işletmenizin dijital motoru olan sitenize
               tam kapsamlı "Satış Sonrası Servis" (After-Sales) sağlıyoruz.
             </p>
-            
+
             <div className="grid sm:grid-cols-2 gap-8">
               <div className="flex flex-col gap-6 p-14 bg-white/5 rounded-[50px] border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] hover:-translate-y-2 transition-all duration-300 min-h-[380px] justify-center">
                 <Zap className="text-primary" size={32} />
@@ -363,7 +363,7 @@ const Home = () => {
           </div>
 
           <div className="lg:w-1/2 relative group">
-             <div className="aspect-square w-full max-w-[500px] flex flex-col items-center justify-center glass-morphism rounded-[60px] p-16 text-center hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] transition-all duration-500 relative border border-white/10">
+             <div className="w-[500px] h-[500px] flex flex-col items-center justify-center glass-morphism rounded-[60px] p-16 text-center hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] transition-all duration-500 relative border border-white/10 flex-shrink-0">
                 <Wrench className="w-32 h-32 text-primary mb-8 group-hover:rotate-45 transition-transform duration-700" />
                 <h3 className="text-3xl font-bold mb-4">Tam Yetkili <br /> Teknik Servis</h3>
                 <p className="text-white/30 uppercase tracking-widest font-bold text-xs">Alfa AI Studio Assurance</p>
