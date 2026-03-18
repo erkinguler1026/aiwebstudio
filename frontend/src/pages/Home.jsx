@@ -65,7 +65,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="text-6xl md:text-9xl font-bold tracking-tight leading-[0.9] mb-10 text-white uppercase"
+          className="text-6xl md:text-9xl font-bold tracking-tight leading-[1.1] mb-10 text-white uppercase"
         >
           Web Siteniz Sizin <br /> 
           İçin <span className="text-gradient">Çalışsın</span><span className="inline-block ml-3 tracking-normal">.</span>
@@ -387,8 +387,8 @@ const Home = () => {
               <span className="block text-white/30 text-[10px] uppercase tracking-widest font-bold mb-2 font-mono">Kurulum Başlangıcı</span>
               <p className="text-5xl font-black text-white tracking-tighter flex items-baseline justify-center gap-1">
                 6.999 ₺ 
-                <span className="text-[16px] text-white/60 font-black ml-1">+KDV</span> 
-                <span className="text-white/20 font-normal text-sm">/tek</span>
+                <span className="text-[18px] text-white/80 font-black ml-1">+KDV</span> 
+                <span className="text-white font-bold text-lg">/tek</span>
               </p>
             </div>
             <div className="w-px h-16 bg-white/10 hidden md:block" />
@@ -396,8 +396,8 @@ const Home = () => {
               <span className="block text-white/30 text-[10px] uppercase tracking-widest font-bold mb-2 font-mono">Yönetim Paketi</span>
               <p className="text-5xl font-black text-primary tracking-tighter flex items-baseline justify-center gap-1">
                 499 ₺ 
-                <span className="text-[16px] text-primary/60 font-black ml-1">+KDV</span> 
-                <span className="text-white/20 font-normal text-sm">/ay</span>
+                <span className="text-[18px] text-primary/80 font-black ml-1">+KDV</span> 
+                <span className="text-white font-bold text-lg">/ay</span>
               </p>
             </div>
             <div className="w-px h-16 bg-white/10 hidden md:block" />
