@@ -176,16 +176,21 @@ const Pricing = () => {
               <h3 className="text-lg font-bold mb-2 tracking-tight">{plan.name}</h3>
               <p className="text-white/40 text-[10px] mb-6 leading-relaxed min-h-[40px] uppercase tracking-wider">{plan.description}</p>
               
-              <div className="mb-8">
                 <div className="flex flex-col gap-1">
                   <span className="text-white/40 text-[10px] uppercase tracking-widest font-bold">Sistem Kurulumu</span>
-                  <span className="text-4xl font-black tracking-tighter text-white">{plan.price}</span>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl font-black tracking-tighter text-white">{plan.price.split(' ')[0]} {plan.price.split(' ')[1]}</span>
+                    {plan.price.includes('+KDV') && <span className="text-[13px] text-white/40 font-bold ml-1">+KDV</span>}
+                  </div>
                 </div>
                 <div className="mt-4 p-3 bg-primary/5 border border-primary/20 rounded-2xl">
                   <span className="block text-white/40 text-[9px] uppercase tracking-widest font-semibold mb-1">Aylık Sistem Yönetimi (Zorunlu)</span>
-                  <span className="text-xl font-bold text-primary">{plan.monthlyService} <span className="text-[10px] text-white/30 font-normal">/ ay</span></span>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-xl font-bold text-primary">{plan.monthlyService.split(' ')[0]} {plan.monthlyService.split(' ')[1]}</span>
+                    {plan.monthlyService.includes('+KDV') && <span className="text-[11px] text-primary/40 font-bold ml-1">+KDV</span>}
+                    <span className="text-[10px] text-white/30 font-normal">/ ay</span>
+                  </div>
                 </div>
-              </div>
 
               <div className="grid grid-cols-2 gap-2 mb-8 border-y border-white/5 py-4">
                 <div className="flex flex-col">
@@ -202,6 +207,14 @@ const Pricing = () => {
                 {plan.features.map((feature, i) => (
                   <FeatureItem key={i} text={feature.text} description={feature.description} />
                 ))}
+              </div>
+
+              <div className="mb-6 pt-4 border-t border-white/5">
+                <span className="text-[10px] text-accent font-black tracking-widest uppercase block mb-2">OPSİYONEL GÜVENCE</span>
+                <div className="flex items-center gap-2 text-white/40">
+                  <ShieldCheck size={14} className="text-accent" />
+                  <span className="text-[11px] font-medium">Siber Sigorta & Güvence Paketi</span>
+                </div>
               </div>
 
               <button className={`w-full py-4 rounded-2xl font-bold text-sm transition-all active:scale-95 ${

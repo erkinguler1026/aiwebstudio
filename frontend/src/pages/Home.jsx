@@ -288,8 +288,7 @@ const Home = () => {
               <span className="text-primary">Sigorta ile de</span> Güvende.
             </motion.h2>
             <p className="text-white/50 text-xl leading-relaxed mb-12 max-w-2xl">
-              Türkiye'nin önde gelen sigorta şirketleri (Allianz, AXA, Anadolu Sigorta) ile iş ortaklığı ağımız üzerinden, 
-              dijital varlıklarınızı siber risklere karşı <span className="text-white font-bold underline decoration-primary underline-offset-4">poliçe kapsamına</span> alıyoruz.
+              İş ortaklığı ağımız üzerinden, dijital varlıklarınızı siber risklere karşı <span className="text-white font-bold underline decoration-primary underline-offset-4">poliçe kapsamına</span> alıyoruz.
             </p>
             
             <div className="space-y-6">
@@ -318,10 +317,8 @@ const Home = () => {
                 <h3 className="text-3xl font-bold mb-4">Risk Yönetimi <br /> & Güvence</h3>
                 <p className="text-white/30 text-xs uppercase tracking-widest font-black">Insurance Partnership</p>
                 <div className="mt-8 pt-8 border-t border-white/5 flex flex-wrap justify-center gap-4 opacity-30 grayscale contrast-125">
-                   {/* Placeholder for small insurance logos / symbols */}
-                   <span className="font-black italic text-xs">ALLIANZ</span>
-                   <span className="font-black italic text-xs">AXA</span>
-                   <span className="font-black italic text-xs">AKSİGORTA</span>
+                   {/* Placeholder for insurance branding */}
+                   <span className="font-black italic text-xs uppercase tracking-tighter">Siber Güvence Partnerliği</span>
                 </div>
              </div>
           </div>
@@ -388,12 +385,12 @@ const Home = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
             <div className="text-center">
               <span className="block text-white/30 text-[10px] uppercase tracking-widest font-bold mb-2 font-mono">Kurulum Başlangıcı</span>
-              <p className="text-5xl font-black text-white tracking-tighter">6.999 ₺ <span className="text-xs text-white/50 font-bold ml-1">+KDV</span> <span className="text-white/20 font-normal text-lg">/tek</span></p>
+              <p className="text-5xl font-black text-white tracking-tighter">6.999 ₺ <span className="text-[13px] text-white/50 font-bold ml-1">+KDV</span> <span className="text-white/20 font-normal text-lg">/tek</span></p>
             </div>
             <div className="w-px h-16 bg-white/10 hidden md:block" />
             <div className="text-center">
               <span className="block text-white/30 text-[10px] uppercase tracking-widest font-bold mb-2 font-mono">Yönetim Paketi</span>
-              <p className="text-5xl font-black text-primary tracking-tighter">499 ₺ <span className="text-xs text-primary/50 font-bold ml-1">+KDV</span> <span className="text-white/20 font-normal text-lg">/ay</span></p>
+              <p className="text-5xl font-black text-primary tracking-tighter">499 ₺ <span className="text-[13px] text-primary/50 font-bold ml-1">+KDV</span> <span className="text-white/20 font-normal text-lg">/ay</span></p>
             </div>
             <div className="w-px h-16 bg-white/10 hidden md:block" />
             <div className="text-center">
