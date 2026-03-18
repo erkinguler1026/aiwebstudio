@@ -84,7 +84,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="flex items-center gap-2 mb-10 text-white text-[16px] uppercase tracking-widest font-bold"
+          className="flex items-center gap-2 mb-10 text-white text-[16px] uppercase tracking-widest font-bold underline decoration-primary underline-offset-4"
         >
           <Shield size={14} className="text-primary" /> 100% Teknik Servis Garantisi
         </motion.div>
@@ -111,7 +111,7 @@ const Home = () => {
             { step: "02", icon: <Rocket size={32} />, title: "Müşteriye Dönüştürün", desc: "Kusursuz kullanıcı deneyimi ile ziyaretçileri sadık müşterilere çevirin." },
             { step: "03", icon: <Zap size={32} />, title: "Otomatikleştirin", desc: "Tüm satış ve iletişim süreçlerinizi 7/24 çalışan sistemlere devredin." }
           ].map((item, i) => (
-            <div key={i} className="flex flex-col gap-6 p-8 group">
+            <div key={i} className="flex flex-col gap-6 p-8 group hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] transition-all duration-300 rounded-[30px] border border-transparent">
               <div className="flex items-center gap-4">
                 <span className="text-4xl font-bold text-white/10 group-hover:text-primary transition-colors">{item.step}</span>
                 <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-primary">
@@ -129,7 +129,7 @@ const Home = () => {
       <section className="max-w-7xl mx-auto py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {benefits.map((benefit, i) => (
-            <div key={i} className="premium-card p-12 rounded-[40px] border border-white/5 hover:border-primary/30 transition-all group">
+            <div key={i} className="premium-card p-12 rounded-[40px] border border-white/5 hover:border-purple-500/50 hover:shadow-[0_0_40px_rgba(168,85,247,0.2)] hover:-translate-y-2 transition-all duration-300 group">
               <div className="mb-8 p-4 bg-white/5 w-fit rounded-2xl border border-white/10 group-hover:bg-primary/10 transition-colors">
                 {benefit.icon}
               </div>
@@ -168,7 +168,7 @@ const Home = () => {
               badge: "Stratejik Katman"
             }
           ].map((layer, i) => (
-            <div key={i} className={`p-10 rounded-[40px] border ${layer.highlight ? 'border-primary/30 bg-primary/5 shadow-2xl shadow-primary/10' : 'border-white/5 bg-white/5'}`}>
+            <div key={i} className={`p-10 rounded-[40px] border hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] transition-all duration-300 ${layer.highlight ? 'border-primary/30 bg-primary/5 shadow-2xl shadow-primary/10' : 'border-white/5 bg-white/5'}`}>
               <span className={`inline-block px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 ${layer.highlight ? 'bg-primary text-white' : 'bg-white/10 text-white/50'}`}>
                 {layer.badge}
               </span>
@@ -195,7 +195,7 @@ const Home = () => {
              { day: "Day 07", title: "Test & Kalite", desc: "Lighthouse performans ve siber güvenlik taramalarını yapıyoruz.", icon: <ShieldCheck size={24}/> },
              { day: "Day 10", title: "Lansman & Büyüme", desc: "Sistemi yayına alıp 7/24 satış yapacak şekilde devreye alıyoruz.", icon: <Rocket size={24}/> }
            ].map((step, i) => (
-             <div key={i} className="p-8 text-center flex flex-col items-center group">
+             <div key={i} className="p-8 text-center flex flex-col items-center group hover:-translate-y-2 transition-all duration-300">
                 <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all mb-6">
                   {step.icon}
                 </div>
@@ -260,7 +260,7 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="premium-card p-10 rounded-[40px] border-white/5 hover:border-primary/20 transition-all flex flex-col gap-6"
+              className="premium-card p-10 rounded-[40px] border-white/5 hover:border-purple-500/50 hover:shadow-[0_0_40px_rgba(168,85,247,0.2)] hover:-translate-y-2 transition-all duration-300 flex flex-col gap-6"
             >
               <div className="p-4 bg-white/5 w-fit rounded-2xl border border-white/10 group-hover:bg-primary/20 transition-colors">
                 {item.icon}
@@ -311,10 +311,10 @@ const Home = () => {
           </div>
           
           <div className="lg:w-2/5">
-             <div className="p-12 glass-morphism rounded-[60px] border border-white/10 text-center relative group">
+             <div className="p-12 glass-morphism rounded-[60px] border border-white/10 text-center relative group hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] transition-all duration-500">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent opacity-20 blur-xl group-hover:opacity-40 transition-opacity" />
-                <ShieldCheck className="w-24 h-24 text-primary mx-auto mb-8" />
-                <h3 className="text-3xl font-bold mb-4">Risk Yönetimi <br /> & Güvence</h3>
+                <ShieldCheck className="w-24 h-24 text-primary mx-auto mb-8 hover:scale-110 hover:text-purple-400 transition-all duration-500 cursor-pointer" />
+                <h3 className="text-3xl font-bold mb-4">ISO31000:2018 Risk Yönetim Sistemi Kapsamında  <br /> & Güvence</h3>
                 <p className="text-white/30 text-xs uppercase tracking-widest font-black">Insurance Partnership</p>
                 <div className="mt-8 pt-8 border-t border-white/5 flex flex-wrap justify-center gap-4 opacity-30 grayscale contrast-125">
                    {/* Placeholder for insurance branding */}
@@ -339,22 +339,22 @@ const Home = () => {
             </p>
             
             <div className="grid sm:grid-cols-2 gap-8">
-              <div className="flex flex-col gap-4 p-6 bg-white/5 rounded-3xl border border-white/10 hover:border-primary/20 transition-colors">
+              <div className="flex flex-col gap-4 p-6 bg-white/5 rounded-3xl border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] hover:-translate-y-2 transition-all duration-300">
                 <Zap className="text-primary" size={32} />
                 <h4 className="text-xl font-bold">Alfa Dakik</h4>
                 <p className="text-white/40 text-sm">Hızda Sınır Yok: Küçük içerik ve tasarım revizyonları için <span className="text-white font-bold text-xs uppercase">60 Dakika</span> müdahale sözü.</p>
               </div>
-              <div className="flex flex-col gap-4 p-6 bg-white/5 rounded-3xl border border-white/10 hover:border-primary/20 transition-colors">
+              <div className="flex flex-col gap-4 p-6 bg-white/5 rounded-3xl border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] hover:-translate-y-2 transition-all duration-300">
                 <Activity className="text-accent" size={32} />
                 <h4 className="text-xl font-bold">Teknik Sigorta</h4>
                 <p className="text-white/40 text-sm text-[11px]">12 ay zorunlu bakım; siber risklere karşı <span className="text-white font-bold text-xs uppercase tracking-tighter">İsteğe Bağlı Poliçe</span> ve kesintisiz çalışma kalkanı.</p>
               </div>
-              <div className="flex flex-col gap-4 p-6 bg-white/5 rounded-3xl border border-white/10 hover:border-primary/20 transition-colors">
+              <div className="flex flex-col gap-4 p-6 bg-white/5 rounded-3xl border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] hover:-translate-y-2 transition-all duration-300">
                 <Wrench className="text-secondary" size={32} />
                 <h4 className="text-xl font-bold">Yedek Parça</h4>
                 <p className="text-white/40 text-sm">Modüler Mimarisi; Gelecekte eklemek istediğiniz her yeni 'AI modülü' için şasiniz bugünden hazır.</p>
               </div>
-              <div className="flex flex-col gap-4 p-6 bg-white/5 rounded-3xl border border-white/10 hover:border-primary/20 transition-colors">
+              <div className="flex flex-col gap-4 p-6 bg-white/5 rounded-3xl border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] hover:-translate-y-2 transition-all duration-300">
                 <Cpu className="text-white" size={32} />
                 <h4 className="text-xl font-bold">Ağır Bakım</h4>
                 <p className="text-white/40 text-sm">Yıllık Rektifiye; Sitenizin motorunu ve kod tabanını her yıl en yeni teknolojiye (GPT-5 vb.) güncelliyoruz.</p>
@@ -363,7 +363,7 @@ const Home = () => {
           </div>
 
           <div className="lg:w-1/2 relative group">
-             <div className="aspect-square glass-morphism rounded-[60px] p-16 flex flex-col items-center justify-center text-center">
+             <div className="aspect-square glass-morphism rounded-[60px] p-16 flex flex-col items-center justify-center text-center hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] transition-all duration-500">
                 <Wrench className="w-32 h-32 text-primary mb-8 group-hover:rotate-45 transition-transform duration-700" />
                 <h3 className="text-3xl font-bold mb-4">Tam Yetkili <br /> Teknik Servis</h3>
                 <p className="text-white/30 uppercase tracking-widest font-bold text-xs">Alfa AI Studio Assurance</p>
@@ -376,7 +376,7 @@ const Home = () => {
 
       {/* 5. Pricing Preview Stripe (Direct Answer) */}
       <section className="max-w-5xl mx-auto py-6 text-center">
-        <div className="glass-morphism p-12 md:p-20 rounded-[60px] border border-primary/30 bg-primary/5 relative overflow-hidden group">
+        <div className="glass-morphism p-12 md:p-20 rounded-[60px] border border-primary/30 bg-primary/5 relative overflow-hidden group hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_60px_rgba(168,85,247,0.3)] transition-all duration-500">
           <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
             <Zap size={120} className="text-primary" />
           </div>
@@ -414,7 +414,7 @@ const Home = () => {
 
       {/* 5. Direct Contact Form */}
       <section id="contact" className="max-w-7xl mx-auto py-40">
-        <div className="premium-card rounded-[60px] p-12 md:p-24 overflow-hidden relative border-white/5">
+        <div className="premium-card rounded-[60px] p-12 md:p-24 overflow-hidden relative border-white/5 hover:border-purple-500/50 hover:shadow-[0_0_60px_rgba(168,85,247,0.3)] hover:-translate-y-2 transition-all duration-500">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 text-white">Bize Bir Mesaj <br /> Bırakın.</h2>
