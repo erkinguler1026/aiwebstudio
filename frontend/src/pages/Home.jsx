@@ -52,7 +52,7 @@ const Home = () => {
     <div className="px-6 relative overflow-hidden bg-[#050505]">
       
       {/* 1. Hero Section - Extreme Focus */}
-      <section className="min-h-[90vh] flex flex-col items-center justify-center text-center max-w-6xl mx-auto py-32">
+      <section className="min-h-[70vh] flex flex-col items-center justify-center text-center max-w-6xl mx-auto pt-24 pb-16">
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -104,7 +104,7 @@ const Home = () => {
         </motion.div>
       </section>
 
-      <section className="max-w-7xl mx-auto py-32 border-y border-white/5">
+      <section className="max-w-7xl mx-auto py-20 border-y border-white/5">
         <div className="grid md:grid-cols-3 gap-12">
           {[
             { step: "01", icon: <Globe size={32} />, title: "Ziyaretçi Çekin", desc: "SEO ve yapay zeka destekli içeriklerle hedef kitlenize anında ulaşın." },
@@ -126,7 +126,7 @@ const Home = () => {
       </section>
 
       {/* 3. Core Outcomes (Bento Box style but minimal) */}
-      <section className="max-w-7xl mx-auto py-40">
+      <section className="max-w-7xl mx-auto py-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {benefits.map((benefit, i) => (
             <div key={i} className="premium-card p-12 rounded-[40px] border border-white/5 hover:border-primary/30 transition-all group">
@@ -144,8 +144,8 @@ const Home = () => {
       </section>
 
       {/* 4. Service Lifecycle (Sistem Yaşam Döngüsü) - NEW */}
-      <section className="max-w-7xl mx-auto py-32 border-t border-white/5">
-        <div className="text-center mb-24">
+      <section className="max-w-7xl mx-auto py-20 border-t border-white/5">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter">3 Katmanlı <span className="text-primary">Sistem Gücü.</span></h2>
           <p className="text-white/40 text-xl max-w-2xl mx-auto">Sadece site yapıp bırakmıyoruz; işinizi büyüten yaşayan bir ekosistem kuruyoruz.</p>
         </div>
@@ -180,8 +180,8 @@ const Home = () => {
       </section>
 
       {/* NEW: Workflow / Success Timeline - SATAN SISTEM */}
-      <section className="max-w-7xl mx-auto py-32 border-t border-white/5">
-        <div className="text-center mb-24">
+      <section className="max-w-7xl mx-auto py-20 border-t border-white/5">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter">Sisteminiz <span className="text-primary">Nasıl Doğuyor?</span></h2>
           <p className="text-white/40 text-xl max-w-2xl mx-auto">Paranızı ve vaktinizi boşa harcamıyoruz; her adımı planlanmış bir mühendislik süreci işletiyoruz.</p>
         </div>
@@ -217,8 +217,8 @@ const Home = () => {
       </section>
 
       {/* 5. Digital Safety & Security (Zırhlı Kod) - NEW SECTION */}
-      <section className="max-w-7xl mx-auto py-40 border-t border-white/5 bg-[radial-gradient(circle_at_center,_rgba(0,102,255,0.03)_0%,_transparent_70%)]">
-        <div className="text-center mb-24">
+      <section className="max-w-7xl mx-auto py-24 border-t border-white/5 bg-[radial-gradient(circle_at_center,_rgba(0,102,255,0.03)_0%,_transparent_70%)]">
+        <div className="text-center mb-16">
           <motion.div 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -273,7 +273,7 @@ const Home = () => {
       </section>
 
       {/* 6. Digital Insurance & Assurance - NEW SECTION */}
-      <section className="max-w-7xl mx-auto py-40 border-t border-white/5 relative overflow-hidden">
+      <section className="max-w-7xl mx-auto py-24 border-t border-white/5 relative overflow-hidden">
         {/* Decorative background element */}
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -z-10" />
         
@@ -326,7 +326,7 @@ const Home = () => {
       </section>
 
       {/* 4. After-Sales / Technical Service (The "Garage" Analogy) */}
-      <section className="max-w-7xl mx-auto py-40 border-t border-white/5">
+      <section className="max-w-7xl mx-auto py-24 border-t border-white/5">
         <div className="flex flex-col lg:flex-row gap-20 items-center">
           <div className="lg:w-1/2">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8">
@@ -375,7 +375,7 @@ const Home = () => {
       </section>
 
       {/* 5. Pricing Preview Stripe (Direct Answer) */}
-      <section className="max-w-5xl mx-auto py-20 text-center">
+      <section className="max-w-5xl mx-auto py-12 text-center">
         <div className="glass-morphism p-12 md:p-20 rounded-[60px] border border-primary/30 bg-primary/5 relative overflow-hidden group">
           <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
             <Zap size={120} className="text-primary" />
