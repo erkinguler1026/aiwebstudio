@@ -311,7 +311,7 @@ const Home = () => {
           </div>
           
           <div className="lg:w-2/5">
-             <div className="p-10 glass-morphism rounded-[50px] border border-white/10 text-center relative group hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] transition-all duration-500">
+             <div className="aspect-square flex flex-col items-center justify-center p-12 glass-morphism rounded-[60px] border border-white/10 text-center relative group hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] transition-all duration-500">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent opacity-20 blur-xl group-hover:opacity-40 transition-opacity" />
                 <ShieldCheck className="w-24 h-24 text-primary mx-auto mb-8 hover:scale-110 hover:text-purple-400 transition-all duration-500 cursor-pointer" />
                 <h3 className="text-3xl font-bold mb-4">ISO31000:2018 Risk Yönetim Sistemi Kapsamında  <br /> & Güvence</h3>
@@ -339,22 +339,22 @@ const Home = () => {
             </p>
             
             <div className="grid sm:grid-cols-2 gap-8">
-              <div className="flex flex-col gap-5 p-10 bg-white/5 rounded-[40px] border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_40px_rgba(168,85,247,0.2)] hover:-translate-y-2 transition-all duration-300">
+              <div className="flex flex-col gap-6 p-14 bg-white/5 rounded-[50px] border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] hover:-translate-y-2 transition-all duration-300 min-h-[380px] justify-center">
                 <Zap className="text-primary" size={32} />
                 <h4 className="text-xl font-bold">Alfa Dakik</h4>
                 <p className="text-white/40 text-sm">Hızda Sınır Yok: Küçük içerik ve tasarım revizyonları için <span className="text-white font-bold text-xs uppercase">60 Dakika</span> müdahale sözü.</p>
               </div>
-              <div className="flex flex-col gap-5 p-10 bg-white/5 rounded-[40px] border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_40px_rgba(168,85,247,0.2)] hover:-translate-y-2 transition-all duration-300">
+              <div className="flex flex-col gap-6 p-14 bg-white/5 rounded-[50px] border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] hover:-translate-y-2 transition-all duration-300 min-h-[380px] justify-center">
                 <Activity className="text-accent" size={32} />
                 <h4 className="text-xl font-bold">Teknik Sigorta</h4>
                 <p className="text-white/40 text-sm text-[11px]">12 ay zorunlu bakım; siber risklere karşı <span className="text-white font-bold text-xs uppercase tracking-tighter">İsteğe Bağlı Poliçe</span> ve kesintisiz çalışma kalkanı.</p>
               </div>
-              <div className="flex flex-col gap-5 p-10 bg-white/5 rounded-[40px] border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_40px_rgba(168,85,247,0.2)] hover:-translate-y-2 transition-all duration-300">
+              <div className="flex flex-col gap-6 p-14 bg-white/5 rounded-[50px] border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] hover:-translate-y-2 transition-all duration-300 min-h-[380px] justify-center">
                 <Wrench className="text-secondary" size={32} />
                 <h4 className="text-xl font-bold">Yedek Parça</h4>
                 <p className="text-white/40 text-sm">Modüler Mimarisi; Gelecekte eklemek istediğiniz her yeni 'AI modülü' için şasiniz bugünden hazır.</p>
               </div>
-              <div className="flex flex-col gap-5 p-10 bg-white/5 rounded-[40px] border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_40px_rgba(168,85,247,0.2)] hover:-translate-y-2 transition-all duration-300">
+              <div className="flex flex-col gap-6 p-14 bg-white/5 rounded-[50px] border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] hover:-translate-y-2 transition-all duration-300 min-h-[380px] justify-center">
                 <Cpu className="text-white" size={32} />
                 <h4 className="text-xl font-bold">Ağır Bakım</h4>
                 <p className="text-white/40 text-sm">Yıllık Rektifiye; Sitenizin motorunu ve kod tabanını her yıl en yeni teknolojiye (GPT-5 vb.) güncelliyoruz.</p>
@@ -363,7 +363,7 @@ const Home = () => {
           </div>
 
           <div className="lg:w-1/2 relative group">
-             <div className="glass-morphism rounded-[50px] p-10 flex flex-col items-center justify-center text-center hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] transition-all duration-500">
+             <div className="aspect-square flex flex-col items-center justify-center glass-morphism rounded-[60px] p-12 text-center hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] transition-all duration-500 relative border border-white/10">
                 <Wrench className="w-32 h-32 text-primary mb-8 group-hover:rotate-45 transition-transform duration-700" />
                 <h3 className="text-3xl font-bold mb-4">Tam Yetkili <br /> Teknik Servis</h3>
                 <p className="text-white/30 uppercase tracking-widest font-bold text-xs">Alfa AI Studio Assurance</p>
