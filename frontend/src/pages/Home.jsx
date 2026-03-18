@@ -68,7 +68,7 @@ const Home = () => {
           className="text-6xl md:text-9xl font-bold tracking-tight leading-[0.9] mb-10 text-white uppercase"
         >
           Web Siteniz Sizin <br /> 
-          İçin <span className="text-gradient">Çalışsın</span><span className="tracking-normal">.</span>
+          İçin <span className="text-gradient">Çalışsın</span><span className="inline-block ml-3 tracking-normal">.</span>
         </motion.h1>
 
         <motion.p 
@@ -387,7 +387,7 @@ const Home = () => {
               <span className="block text-white/30 text-[10px] uppercase tracking-widest font-bold mb-2 font-mono">Kurulum Başlangıcı</span>
               <p className="text-5xl font-black text-white tracking-tighter flex items-baseline justify-center gap-1">
                 6.999 ₺ 
-                <span className="text-[14px] text-white/50 font-bold ml-1">+KDV</span> 
+                <span className="text-[16px] text-white/60 font-black ml-1">+KDV</span> 
                 <span className="text-white/20 font-normal text-sm">/tek</span>
               </p>
             </div>
@@ -396,7 +396,7 @@ const Home = () => {
               <span className="block text-white/30 text-[10px] uppercase tracking-widest font-bold mb-2 font-mono">Yönetim Paketi</span>
               <p className="text-5xl font-black text-primary tracking-tighter flex items-baseline justify-center gap-1">
                 499 ₺ 
-                <span className="text-[14px] text-primary/50 font-bold ml-1">+KDV</span> 
+                <span className="text-[16px] text-primary/60 font-black ml-1">+KDV</span> 
                 <span className="text-white/20 font-normal text-sm">/ay</span>
               </p>
             </div>
