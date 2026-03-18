@@ -340,24 +340,24 @@ const Home = () => {
 
             <div className="grid sm:grid-cols-2 gap-8">
               <div className="flex flex-col gap-6 p-14 bg-white/5 rounded-[50px] border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] hover:-translate-y-2 transition-all duration-300 min-h-[380px] justify-center">
-                <Zap className="text-primary" size={32} />
-                <h4 className="text-xl font-bold">Alfa Dakik</h4>
-                <p className="text-white/40 text-sm">Hızda Sınır Yok: Küçük içerik ve tasarım revizyonları için <span className="text-white font-bold text-xs uppercase">60 Dakika</span> müdahale sözü.</p>
+                <Zap className="text-primary" size={40} />
+                <h4 className="text-3xl font-bold">Alfa Dakik</h4>
+                <p className="text-white/40 text-lg">Hızda Sınır Yok: Küçük içerik ve tasarım revizyonları için <span className="text-white font-bold text-sm uppercase">60 Dakika</span> müdahale sözü.</p>
               </div>
               <div className="flex flex-col gap-6 p-14 bg-white/5 rounded-[50px] border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] hover:-translate-y-2 transition-all duration-300 min-h-[380px] justify-center">
-                <Activity className="text-accent" size={32} />
-                <h4 className="text-xl font-bold">Teknik Sigorta</h4>
-                <p className="text-white/40 text-sm text-[11px]">12 ay zorunlu bakım; siber risklere karşı <span className="text-white font-bold text-xs uppercase tracking-tighter">İsteğe Bağlı Poliçe</span> ve kesintisiz çalışma kalkanı.</p>
+                <Activity className="text-accent" size={40} />
+                <h4 className="text-3xl font-bold">Teknik Sigorta</h4>
+                <p className="text-white/40 text-lg">12 ay zorunlu bakım; siber risklere karşı <span className="text-white font-bold text-sm uppercase tracking-tighter">İsteğe Bağlı Poliçe</span> ve kesintisiz çalışma kalkanı.</p>
               </div>
               <div className="flex flex-col gap-6 p-14 bg-white/5 rounded-[50px] border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] hover:-translate-y-2 transition-all duration-300 min-h-[380px] justify-center">
-                <Wrench className="text-secondary" size={32} />
-                <h4 className="text-xl font-bold">Yedek Parça</h4>
-                <p className="text-white/40 text-sm">Modüler Mimarisi; Gelecekte eklemek istediğiniz her yeni 'AI modülü' için şasiniz bugünden hazır.</p>
+                <Wrench className="text-secondary" size={40} />
+                <h4 className="text-3xl font-bold">Yedek Parça</h4>
+                <p className="text-white/40 text-lg">Modüler Mimarisi; Gelecekte eklemek istediğiniz her yeni 'AI modülü' için şasiniz bugünden hazır.</p>
               </div>
               <div className="flex flex-col gap-6 p-14 bg-white/5 rounded-[50px] border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)] hover:-translate-y-2 transition-all duration-300 min-h-[380px] justify-center">
-                <Cpu className="text-white" size={32} />
-                <h4 className="text-xl font-bold">Ağır Bakım</h4>
-                <p className="text-white/40 text-sm">Yıllık Rektifiye; Sitenizin motorunu ve kod tabanını her yıl en yeni teknolojiye (GPT-5 vb.) güncelliyoruz.</p>
+                <Cpu className="text-white" size={40} />
+                <h4 className="text-3xl font-bold">Ağır Bakım</h4>
+                <p className="text-white/40 text-lg">Yıllık Rektifiye; Sitenizin motorunu ve kod tabanını her yıl en yeni teknolojiye (GPT-5 vb.) güncelliyoruz.</p>
               </div>
             </div>
           </div>
