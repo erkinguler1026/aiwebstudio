@@ -291,22 +291,21 @@ const Home = () => {
               İş ortaklığı ağımız üzerinden, dijital varlıklarınızı siber risklere karşı <span className="text-white font-bold underline decoration-primary underline-offset-4">poliçe kapsamına</span> alıyoruz.
             </p>
             
-            <div className="space-y-6">
-              {[
-                { title: "Siber Risk Poliçesi", desc: "Veri sızıntısı, hacking ve dijital itibar suikastlerine karşı mali teminat." },
-                { title: "İş Durması Teminatı", desc: "Olası teknik aksaklıklardan kaynaklanan gelir kaybını koruma altına alan çözümler." },
-                { title: "Acente Danışmanlığı", desc: "Anlaşmalı acentelerimiz aracılığıyla projenize en uygun poliçenin hazırlanması." }
-              ].map((item, i) => (
-                <div key={i} className="flex gap-4 items-start">
-                   <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
-                     <CheckCircle2 size={14} className="text-primary" />
-                   </div>
-                   <div>
-                     <h4 className="text-lg font-bold text-white">{item.title}</h4>
-                     <p className="text-white/40 text-sm">{item.desc}</p>
-                   </div>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 relative mt-10">
+               <div className="hidden sm:block absolute top-[32px] left-[15%] right-[15%] h-px bg-white/10 -z-10" />
+               {[
+                 { title: "Siber Risk Poliçesi", desc: "Veri sızıntısı, hacking ve dijital itibar suikastlerine karşı mali teminat.", icon: <ShieldAlert size={24}/> },
+                 { title: "İş Durması Teminatı", desc: "Olası teknik aksaklıklardan kaynaklanan gelir kaybını koruma altına alan çözümler.", icon: <Activity size={24}/> },
+                 { title: "Acente Danışmanlığı", desc: "Anlaşmalı acentelerimiz aracılığıyla projenize en uygun poliçenin hazırlanması.", icon: <ShieldCheck size={24}/> }
+               ].map((item, i) => (
+                 <div key={i} className="text-center flex flex-col items-center group hover:-translate-y-2 transition-all duration-300">
+                    <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all mb-4">
+                      {item.icon}
+                    </div>
+                    <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
+                    <p className="text-white/40 text-[13px] leading-relaxed">{item.desc}</p>
+                 </div>
+               ))}
             </div>
           </div>
 
